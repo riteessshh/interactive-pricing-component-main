@@ -8,6 +8,10 @@
 
   <title>Frontend Mentor | Interactive pricing component</title>
 
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+
+
   <!-- local stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
@@ -18,35 +22,37 @@
   </style>
 </head>
 <body>
-  <div class="">
+  <img src="images/bg-pattern.svg" class="bg-image" alt="">
+  <img src="images/pattern-circles.svg" class="circles" alt="">
+  <div class="header">
     <h1 class="heading">Simple, traffic-based pricing</h1>
     <p class="sub-heading">Sign-up for our 30-day trial. No credit card required.</p>
   </div>
   <div class="card">
     <div class="pageviews">
-      <p><span id="views">10</span>k Pageviews</p>
+      <p><span id="views">10</span>K PAGEVIEWS</p>
     </div>
     <div class="charges">
-      <p>$<span id="money">16.00</span>/month</p>
+      <p><span class="dollar">$</span><span id="money">16.00</span> <span class="months">/month</span></p>
     </div>
     <div class="slide-container">
       <input type="range" min="10" max="1000" value="500" class="slide" id="myRange">
     </div>
     <div class="billing">
-      Monthly Billing
+      <p class="billing-text">Monthly Billing</p>
       <label class="switch">
         <input type="checkbox">
         <span class="slider round"></span>
       </label>
-      Yearly Billing 25% discount
+      <p class="billing-text">Yearly Billing <span class="discount">25% discount</span></p>
     </div>
     <div class="features">
-      <p>Unlimited websites</p>
-      <p>100% data ownership</p>
-      <p>Email reports</p>
+      <p><span><img src="images/icon-check.svg" class="check" alt=""></span>Unlimited websites</p>
+      <p><span><img src="images/icon-check.svg" class="check" alt=""></span>100% data ownership</p>
+      <p><span><img src="images/icon-check.svg" class="check" alt=""></span>Email reports</p>
     </div>
     <div class="start-button">
-      Start my trial
+      <button type="button" class="start" name="start">Start my trial</button>
     </div>
   </div>
   <script src="app.js" charset="utf-8"></script>
