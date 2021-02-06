@@ -37,9 +37,7 @@ slide.oninput = function() {
 
 if (screen.width <= 400) {
   document.querySelector(".discount").innerText = "-25%";
-
 } else {
   document.querySelector(".discount").innerText = "25% discount";
-
 }
 window.onresize = function(){ location.reload(); }
