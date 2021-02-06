@@ -2,6 +2,7 @@ body{
   position: relative;
   margin: 0;
   font-family: 'Manrope', sans-serif;
+  font-weight: bold;
 }
 
 .bg-image {
@@ -121,6 +122,9 @@ body{
   width: 70%;
   border-radius: 30px;
 }
+.start:hover{
+  color: white;
+}
 
 /* toggle button */
 .switch {
@@ -159,10 +163,10 @@ body{
   transition: .4s;
 }
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: hsl(174, 77%, 80%);
 }
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px hsl(174, 77%, 80%);
 }
 input:checked + .slider:before {
   -webkit-transform: translateX(16px);
@@ -175,6 +179,14 @@ input:checked + .slider:before {
 }
 .slider.round:before {
   border-radius: 50%;
+}
+
+.attribution{
+  position: fixed;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  bottom: 10px;
 }
 
 
@@ -190,31 +202,33 @@ input:checked + .slider:before {
   display: block;
   margin: 10px auto;
   width: 82%; /* Full-width */
-  height: 5px; /* Specified height */
-  background: #d3d3d3; /* Grey background */
+  height: 7px; /* Specified height */
+  background: hsl(174, 77%, 80%); /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
-/* Mouse-over effects */
-.slide:hover {
-  opacity: 1; /* Fully shown on mouse-over */
-}
+
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slide::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 25px; /* Set a specific slider handle width*/
-  height: 25px; /* Slider handle height */
+  width: 40px; /* Set a specific slider handle width*/
+  height: 40px; /* Slider handle height */
   background: url(images/icon-slider.svg);
   background-position: center center;
-  /* background-attachment: fixed; */
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 60%;
   background-color: hsl(174, 86%, 45%);
+  box-shadow: 0 15px 25px 0.1px hsl(174, 86%, 45%);
   border-radius: 50%;
   cursor: pointer; /* Cursor on hover */
+}
+.slide::-webkit-slider-thumb:hover{
+  opacity: 1;
+  background-color:  hsl(174, 86%, 45%);
+  filter: brightness(90%);
 }
 .slide::-moz-range-thumb {
   width: 25px; /* Set a specific slider handle width */
@@ -222,4 +236,71 @@ input:checked + .slider:before {
   background: url(images/icon-slider.svg);
   border-radius: 50%;
   cursor: pointer; /* Cursor on hover */
+}
+
+@media (max-width:390px) {
+
+  .circles{
+    position: absolute;
+    left: 100px;
+  }
+  .bg-image{
+    height: fit-content;
+  }
+  .header{
+    width: 100%;
+    padding: 70px 0;
+  }
+  .heading{
+    font-size: 1.3rem;
+  }
+  .sub-heading{
+    width: 60%;
+    margin: auto;
+  }
+  .card {
+    width: 85%;
+    grid-template-columns: 1fr;
+  }
+  .pageviews{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+  }
+  .charges{
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .billing {
+    text-align: center;
+    font-size: 1rem;
+    margin: auto 0;
+  }
+  .billing-text {
+    display: inline-block;
+    padding: 5px;
+    font-size: 15px;
+  }
+  .discount{
+    display: inline-block;
+    background: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 30px;
+  }
+  .features{
+    display: block;
+    position: static;
+    font-size: 13px;
+    text-align: center;
+  }
+  .start-button{
+    grid-row-start: 6;
+  }
+  .attribution{
+    position: static;
+    margin:  20px auto 10px;
+  }
 }
